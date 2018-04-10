@@ -1,0 +1,40 @@
+{
+  "name": "reason-conf-sponsor-with-markdown",
+  "description": "Reason Conf 2018",
+  "version": "1.0.0",
+  "dependencies": {
+    "marked": "^0.3.12",
+    "normalize.css": "^7.0.0",
+    "re-classnames": "^0.0.3",
+    "react-social-icons": "^2.8.1",
+    "reason-react": "^0.3.0"
+  },
+  "keywords": ["gatsby"],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "re:build": "bsb -make-world",
+    "re:start": "bsb -make-world -w",
+    "re:clean": "bsb -clean-world",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.4",
+    "bs-platform": "^2.1.0",
+    "gatsby": "^1.9.128",
+    "gatsby-link": "^1.6.28",
+    "gatsby-plugin-google-analytics": "^1.0.15",
+    "gatsby-plugin-postcss-sass": "^1.0.15",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.8.2"
+  },
+  "lint-staged": {
+    "*.re": ["refmt --in-place", "git add"],
+    "*.{js,json,md,css,scss}": ["prettier --write", "git add"]
+  },
+  "browserslist": ["> 1%", "last 2 versions", "IE 11"]
+}
